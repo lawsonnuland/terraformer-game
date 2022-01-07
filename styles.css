@@ -1,0 +1,28 @@
+canvas {
+    border: 5px;
+    border-color: black;
+}
+
+#tabs {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin-left: 0px;
+    padding-left: 0%;
+}
+
+li button {
+    padding: 10px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    background-color: grey;
+    width: 100%;
+    padding: 4px;
+}
+
+body {
+    padding: 0px 10px;
+}

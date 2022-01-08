@@ -18,11 +18,16 @@ li button {
 footer {
     position: absolute;
     bottom: 0px;
+    left: 0px;
     background-color: grey;
     width: 100%;
     padding: 4px;
+    text-align: center;
 }
 
 body {
     padding: 0px 10px;
+    color: white;
+    background-color: black;
+    max-width: 80%;
 }

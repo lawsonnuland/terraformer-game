@@ -16,8 +16,16 @@
     </ul>
 
     <div class="tab" id="spaceTab">
-        <canvas id="spacecraftDisplay" width="200" height="200" ></canvas>
+        <canvas id="spacecraftDisplay" width="200" height="200" style="border:1px solid #ffffff;"></canvas>
         <p>Here's where you develop your spacecraft!</p>
+        <div id="spaceactions">
+            <button onclick="increaseEnergy()">Increase Energy</button>
+            <button onclick="upgradeEnergy()" id="upgradeEnergyCollection">Upgrade Energy Collection (Currently Level 1) Cost: 10 Joules</button>
+        </div>
+        <div id="spacestats">
+            <p id="spaceEnergyStat">Energy</p>
+            <p id="spaceMassStat">Mass</p>
+        </div>
     </div>
 
     <div class="tab" id="planetTab">
@@ -29,5 +37,6 @@
     </div>
 
     <footer>Copyright 2022 @ Lawson Nuland</footer>
+    <script src="main.js" charset="utf-8" type="text/javascript"></script>
 </body>
 </html>

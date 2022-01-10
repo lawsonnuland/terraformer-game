@@ -23,13 +23,15 @@ let upgradeEnergy = () => {
 let gameUpdate = window.setInterval(function() {
     document.getElementById("spaceEnergyStat").innerHTML = gameData.energy + " Joules";
     document.getElementById("upgradeEnergyCollection").innerHTML = "Upgrade Energy Collection (Currently Level " + gameData.energyPerClick + ") Cost: " + gameData.energyBasicUpgradeCost + " Joules";
+    drawShip();
 }, 1000)
 
-var savegame = JSON.parse(localStorage.getItem("terraformerSave"))
+let savegame = JSON.parse(localStorage.getItem("terraformerSave"))
 if (savegame !== null) {
     gameData = savegame
 }
 
-var saveGameLoop = window.setInterval(function() {
+let saveGameLoop = window.setInterval(function() {
   localStorage.setItem("terraformerSave", JSON.stringify(gameData))
 }, 15000)
+

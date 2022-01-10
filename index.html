@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terraformer</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="js/spacecraftDisplay.js" charset="utf-8" type="text/javascript"></script>
+    <script src="js/main.js" charset="utf-8" type="text/javascript"></script>
 </head>
 <body>
     <h1>Terraformer</h1>
     <ul id="tabs">
-        <li><button>Space</button></li>
-        <li><button>Planet</button></li>
-        <li><button>Life</button></li>
+        <li><button id="spaceButton" class="active">Space</button></li>
+        <li><button id="planetButton" class="inactive">Planet</button></li>
+        <li><button id="lifeButton" class="inactive">Life</button></li>
     </ul>
 
     <div class="tab" id="spaceTab">
@@ -28,15 +30,14 @@
         </div>
     </div>
 
-    <div class="tab" id="planetTab">
+    <div class="tab inactive" id="planetTab">
         <p>Here is the Planet info!</p>
     </div>
 
-    <div class="tab" id="lifeTab">
+    <div class="tab inactive" id="lifeTab">
         <p>Here's where you develop life!</p>
     </div>
 
     <footer>Copyright 2022 @ Lawson Nuland</footer>
-    <script src="main.js" charset="utf-8" type="text/javascript"></script>
 </body>
 </html>

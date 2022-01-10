@@ -31,3 +31,7 @@ body {
     background-color: black;
     max-width: 80%;
 }
+
+.inactive {
+    display: none;
+}

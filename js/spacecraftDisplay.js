@@ -3,5 +3,7 @@ let c = document.getElementById("spacecraftDisplay");
 let ctx = c.getContext("2d");
 
 ctx.fillStyle = "#FFFFFF";
-ctx.fillRect(98, 98, 2, 2);
+if (gameData.mass <= 100) {
+    ctx.fillRect(98, 98, 2, 2);
+}
 }

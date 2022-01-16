@@ -17,12 +17,12 @@
         <li><button id="lifeButton" class="inactive">Life</button></li>
     </ul>
 
-    <div class="tab" id="spaceTab">
+    <div class="tab active" id="spaceTab">
         <canvas id="spacecraftDisplay" width="200" height="200" style="border:1px solid #ffffff;"></canvas>
         <p>Here's where you develop your spacecraft!</p>
         <div id="spaceactions">
-            <button onclick="increaseEnergy()">Increase Energy</button>
-            <button onclick="upgradeEnergy()" id="upgradeEnergyCollection">Upgrade Energy Collection (Currently Level 1) Cost: 10 Joules</button>
+            <button onclick="increment(this)" data-resource="energy" data-upgrade="energyPerClick">Increase Energy</button>
+            <button onclick="linearUpgrade(this)" id="upgradeEnergyCollection" data-resource="energy" data-upgrade="energyPerClick" data-upgrade-cost="energyLinearUpgradeCost">Upgrade Energy Collection <br> Cost: 10 Joules</button>
         </div>
         <div id="spacestats">
             <p id="spaceEnergyStat">Energy</p>
@@ -32,10 +32,18 @@
 
     <div class="tab inactive" id="planetTab">
         <p>Here is the Planet info!</p>
+        <div id="spaceactions">
+            <button onclick="increment(this)" data-resource="magnet" data-upgrade="magnetPerClick">Charge Magnetosphere</button>
+            <button onclick="upgrade(this)" id="upgradeMagnetCharge" data-resource="magnet">Upgrade Magnetosphere Charge (Currently Level 1) Cost: 10 Joules</button>
+        </div>
     </div>
 
     <div class="tab inactive" id="lifeTab">
         <p>Here's where you develop life!</p>
+    </div>
+
+    <div class="debug">
+        <button onclick="wipeProgress()">Wipe Progress</button>
     </div>
 
     <footer>Copyright 2022 @ Lawson Nuland</footer>

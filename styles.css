@@ -1,18 +1,86 @@
-canvas {
-    border: 5px;
-    border-color: black;
+* {
+    margin: 0px;
+    padding: 0px;
 }
 
-#tabs {
-    list-style: none;
+:root {
+    --main-bg-color: #000000;
+    --second-bg-color: #3a3b3c;
+}
+
+body {
+    color: white;
+    background-color: var(--main-bg-color);
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 15% 10% 70% 5%;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    width: 98%;
+    padding: 5px;
+    min-height: 5em;
+}
+
+.header > * {
+    padding: 5px;
+    margin: 5px;
+}
+
+.log {
+    border: 1px solid white;
+    padding: 5px;
+}
+
+.nav {
+    background-color: var(--second-bg-color);
+    padding: 5px;
     display: flex;
     gap: 10px;
-    margin-left: 0px;
-    padding-left: 0%;
+    align-items: center;
 }
 
-li button {
+.nav button {
     padding: 10px;
+}
+
+.nav ul {
+    list-style: none;
+}
+
+.tabcontent {
+    height: auto;
+}
+
+.space, .planet, .life {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    height: 100%;
+}
+
+.upgrades {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.upgradebuttons {
+    border: 1px solid red;
+}
+
+.resourcedisplay {
+    border: 1px solid green;
+}
+
+.spacecraft {
+    border: 1px solid blue;
+    text-align: center;
+    vertical-align: middle;
+}
+
+canvas {
+    border: 3px solid white;
 }
 
 footer {
@@ -23,13 +91,6 @@ footer {
     width: 100%;
     padding: 4px;
     text-align: center;
-}
-
-body {
-    padding: 0px 10px;
-    color: white;
-    background-color: black;
-    max-width: 80%;
 }
 
 .inactive {

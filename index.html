@@ -7,44 +7,50 @@
     <title>Terraformer</title>
     <link rel="stylesheet" href="styles.css">
     <script src="js/spacecraftDisplay.js" charset="utf-8" type="text/javascript"></script>
-    <script src="js/main.js" charset="utf-8" type="text/javascript"></script>
+    <script src="js/main.js" charset="utf-8" type="text/javascript" defer></script>
 </head>
 <body>
-    <h1>Terraformer</h1>
-    <ul id="tabs">
-        <li><button id="spaceButton" class="active">Space</button></li>
-        <li><button id="planetButton" class="inactive">Planet</button></li>
-        <li><button id="lifeButton" class="inactive">Life</button></li>
-    </ul>
-
-    <div class="tab active" id="spaceTab">
-        <canvas id="spacecraftDisplay" width="200" height="200" style="border:1px solid #ffffff;"></canvas>
-        <p>Here's where you develop your spacecraft!</p>
-        <div id="spaceactions">
-            <button onclick="increment(this)" data-resource="energy" data-upgrade="energyPerClick">Increase Energy</button>
-            <button onclick="linearUpgrade(this)" id="upgradeEnergyCollection" data-resource="energy" data-upgrade="energyPerClick" data-upgrade-cost="energyLinearUpgradeCost">Upgrade Energy Collection <br> Cost: 10 Joules</button>
-        </div>
-        <div id="spacestats">
-            <p id="spaceEnergyStat">Energy</p>
-            <p id="spaceMassStat">Mass</p>
+    <div class="header">
+        <h1>Terraformer</h1>
+        <div class="log">
+            <p>Filler content</p>
         </div>
     </div>
 
-    <div class="tab inactive" id="planetTab">
-        <p>Here is the Planet info!</p>
-        <div id="spaceactions">
-            <button onclick="increment(this)" data-resource="magnet" data-upgrade="magnetPerClick">Charge Magnetosphere</button>
-            <button onclick="upgrade(this)" id="upgradeMagnetCharge" data-resource="magnet">Upgrade Magnetosphere Charge (Currently Level 1) Cost: 10 Joules</button>
+    <div class="nav">
+        <ul class="nav" id="tabs">
+            <li><button id="spaceButton" class="active">Space</button></li>
+            <li><button id="planetButton" class="active">Planet</button></li>
+            <li><button id="lifeButton" class="active">Life</button></li>
+        </ul>
+    </div>
+    
+    <div class="tabcontent">
+        <div class="space active">
+            <div class="spaceupgrades upgrades">
+                <div class="upgradebuttons spaceupgrades">
+                    <div class="spaceenergy"></div>
+                    <div class="spacemass"></div>
+                    <div class="spaceprocessing"></div>
+                </div>
+                <div class="resourcedisplay spaceresources">
+
+                </div> 
+            </div>
+            <div class="spacecraft">
+                <canvas id="spacecraftDisplay" width="400" height="400"></canvas>
+            </div>
+        </div>
+
+        <div class="planet inactive">
+
+        </div>
+
+        <div class="life inactive">
+
         </div>
     </div>
-
-    <div class="tab inactive" id="lifeTab">
-        <p>Here's where you develop life!</p>
-    </div>
-
-    <div class="debug">
-        <button onclick="wipeProgress()">Wipe Progress</button>
-    </div>
+    
 
     <footer>Copyright 2022 @ Lawson Nuland</footer>
 </body>
